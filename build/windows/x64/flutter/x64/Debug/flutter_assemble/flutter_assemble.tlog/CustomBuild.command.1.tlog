@@ -1,0 +1,28 @@
+^C:\USERS\SANJA\DESKTOP\ONLINESTORE\ECOM_STARTUP_CODE\CLIENT_SIDE\ADMIN\BUILD\WINDOWS\X64\CMAKEFILES\C885560353802AC19EB892C919B3ABD1\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=C:\Users\sanja\Desktop\onlinestore\ecom_startup_code\client_side\admin FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\sanja\Desktop\onlinestore\ecom_startup_code\client_side\admin\windows\flutter\ephemeral PROJECT_DIR=C:\Users\sanja\Desktop\onlinestore\ecom_startup_code\client_side\admin FLUTTER_TARGET=C:\Users\sanja\Desktop\onlinestore\ecom_startup_code\client_side\admin\lib\main.dart DART_DEFINES=Zmx1dHRlci5pbnNwZWN0b3Iuc3RydWN0dXJlZEVycm9ycz10cnVl,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC9lZGQ4NTQ2MTE2NDU3YmRmMWM1YmRmYjEzZWNiOTQ2M2QyYmI1ZWQ0Lw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\sanja\Desktop\onlinestore\ecom_startup_code\client_side\admin\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SANJA\DESKTOP\ONLINESTORE\ECOM_STARTUP_CODE\CLIENT_SIDE\ADMIN\BUILD\WINDOWS\X64\CMAKEFILES\D6D5EC5B3F0A84F1E7A8365238373E5A\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SANJA\DESKTOP\ONLINESTORE\ECOM_STARTUP_CODE\CLIENT_SIDE\ADMIN\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/sanja/Desktop/onlinestore/ecom_startup_code/client_side/admin/windows -BC:/Users/sanja/Desktop/onlinestore/ecom_startup_code/client_side/admin/build/windows/x64 --check-stamp-file C:/Users/sanja/Desktop/onlinestore/ecom_startup_code/client_side/admin/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
