@@ -1,4 +1,8 @@
+import 'dart:developer';
 import 'dart:io';
+import 'package:admin/models/api_response.dart';
+import 'package:admin/utility/snack_bar_helper.dart';
+
 import '../../../services/http_services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart' hide Category;
@@ -21,8 +25,44 @@ class CategoryProvider extends ChangeNotifier {
 
   CategoryProvider(this._dataProvider);
 
-  //TODO: should complete addCategory
-
+  //addCategory logic
+   addCategory() async {
+     try {
+       if(selectedImage == null){
+         SnackBarHelper.showErrorSnackBar("Please Choose an Image!");
+         return; //? stop the program eviction
+       }
+     Map<String, dynamic>formDataMap = {
+       'name': categoryNameCtrl.text,
+       'image': 'no data', // ? image path will be added from server
+     };
+     final FormData form = await createFormData(imgXFile: imgXFile, formData: formDataMap);
+     final response = await service.addItem(endpointUrl: 'categories', itemData: form);
+     if(response.isOk)
+       {
+         ApiResponse apiResponse = ApiResponse.fromJson(response.body, null);
+         if(apiResponse.success == true){
+            clearFields();
+            SnackBarHelper.showSuccessSnackBar('${apiResponse.message}');
+            log('category added');
+         }
+         else
+           {
+             SnackBarHelper.showErrorSnackBar('Failed to add Category: ${apiResponse.message}');
+           }
+       }
+     else
+       {
+         SnackBarHelper.showErrorSnackBar('Error ${response.body?['message'] ?? response.statusText}');
+       }
+     }
+     catch(e)
+     {
+       print(e);
+       SnackBarHelper.showErrorSnackBar('An error occurred: $e');
+       rethrow;
+     }
+   }
   //TODO: should complete updateCategory
 
   //TODO: should complete submitCategory
